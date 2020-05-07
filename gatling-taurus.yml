@@ -1,0 +1,13 @@
+execution:
+- executor: gatling
+  scenario: existing
+
+  concurrency: 10
+  ramp-up: 30s
+  steps: 5
+  hold-for: 2m
+
+scenarios:
+  existing:
+    script: src\test\scala\ExploreDemo\ExploreGetTours.scala
+    simulation: ExploreDemo.ExploreGetTours
